@@ -1,0 +1,131 @@
+\documentclass[11pt]{article} \usepackage{geometry} % margins
+\usepackage{titlesec} % styling sections
+\usepackage[fixed]{fontawesome5} % nice icons
+\usepackage[svgnames]{xcolor}
+\usepackage{hyperref}  % for hyperlinks
+
+% styling parameters >>> Configure page margins with geometry
+\geometry{left=1.4cm, top=1cm, right=1.4cm, bottom=1.2cm, footskip=0.5cm}
+\hypersetup{
+  colorlinks=true,
+  allcolors={NavyBlue}
+}
+
+\titleformat{\section}{\normalfont\Large\bfseries}{\thesection}{1em}{}[{\titlerule[0.3pt]}]
+\titlespacing*{\section}{0pt}{0pt}{10pt}
+\pagenumbering{gobble}
+% <<<
+
+% some formatting macros
+\newcommand{\edu}[3]{
+  \textbf{#1}\hfill (#2)\\
+  #3\vspace{0.7em}}
+
+\newcommand{\jobl}[5]{%
+  \textbf{#1}\hfill (#2)\\
+  #3\vspace{0.25em}\\
+  \textbf{Role:} #4\\
+  \textbf{Focus:} #5}
+
+\newcommand{\job}[5]{%
+  \jobl{#1}{#2}{#3}{#4}{#5}\vspace{0.5em}
+}
+
+\begin{document}
+% info header >>>
+  \begin{minipage}[c]{0.74\textwidth}
+    \centering
+    {\LARGE Alexey \textbf{Bochkarev}}\\
+    ---\\ 
+    Researcher in Mathematical Optimization / Operations Research\\
+    PhD candidate, Clemson University
+  \end{minipage}\hfill%
+  \begin{minipage}{0.26\textwidth}
+    \faEnvelope \href{mailto:abochka@g.clemson.edu}{abochka@g.clemson.edu}\\
+    \faGlobe \href{https://www.bochkarev.io}{www.bochkarev.io}\\
+    \faGithub \href{https://github.com/alex-bochkarev}{alex-bochkarev}\\
+    \faTwitter \href{https://twitter.com/a_bochka}{@a\_bochka}\\
+    \faTelegram \href{https://t.me/abochka}{@abochka}
+  \end{minipage}
+
+ \section*{Research interests and experience}
+ Combinatorial optimization, decision diagrams and graphs, network optimization
+ and interdiction. Current project aims to apply game playing and reinforcement
+ learning techniques to the Dynamic Shortest-path Interdiction problem. Previous
+ one dealt with the Consistent Path Problem, trying to get computational edge in
+ combinatorial problems by representing binary constraints (e.g., in a variant
+ of the Facility Location problem) as Binary Decision Diagrams.
+ \textbf{Research supervisor:}
+ \href{https://scholar.google.com/citations?user=87CaUHYAAAAJ&hl=en}{Dr. J. Cole
+   Smith.}\vspace{0.5em}\\
+ \faFile*[regular] \textbf{A. Bochkarev}, J.C. Smith, On Aligning
+ Non-Order-Associated Binary Decision Diagrams, revision submitted to \textit{INFORMS
+   Journal on
+   Computing}. Results presented at INFORMS Annual conference, 2020.\\
+
+ 
+ \noindent
+ \begin{minipage}[t]{0.49\textwidth}
+   \section*{Education} 
+   \edu{PhD Industrial Engineering}{2018--2021 exp}{
+     Clemson University, US. OR track}
+
+   \edu{MSc/BSc Appl. Math and Physics}{2004--2010}{
+   Moscow Institute of Physics and Technology, Russia}
+
+   \edu{M.A. Economics}{2008--2010}{
+   New Economic School, Russia}
+ \section*{Selected coursework}
+ \textbf{University:} Mathematical Programming, Network Flows, Algorithms and Data Structures,
+ Stochastic Programming intro, Power Markets and Regulations, Game Theory,
+ Probability / Statistics, Foundations of Data Science, Calculus \& Co.\vspace{0.5em}
+
+ \textbf{Online:} Analytics Edge (MITx @ EdX), ML basics (Andrew Ng @ Coursera).\\
+   \section*{Programming skills}
+   \textbf{Main stack:} Python (gurobipy / gurobi, pulp/cbc, numpy, pandas,
+   matplotlib/plotly/seaborn), R (ggplot, dplyr, tidyverse), C++, Julia (JuMP)\\
+   \textbf{Basic knowledge:} PyTorch, Java, Matlab/Octave\\
+   \section*{Other technical skills}
+   PBS (comp cluster), GNU/Linux, bash; make, git, \LaTeX, Emacs, basic GIS
+   (QGIS), Inkscape, beamer / PPT / LO Impress / reveal.js, Jupyter Notebook.
+   \vspace{0.5em}
+
+   \section*{(Human) Languages}
+   English (fluent), Russian (native), German (A1).
+ \end{minipage}\hfill%
+ \begin{minipage}[t]{0.49\textwidth}
+   \section*{Teaching experience}
+   Designed and delivered  two 4-days mini-courses for gifted
+   high-school students and early undergrads: \textit{``Practical Intro to Probability''}
+   and \textit{``A Glimplse into Algorithms''}, 2021 (RUS, ENG).
+
+   TA in ``Intro probability'' course, ENG, CU, 2021\vspace{0.3em}
+
+   Other initiatives: ``OR Tech Seminar'' (research toolbox, 4 workshops, 2021)
+   
+   \section*{Service \& Community}
+   \textit{INFORMS Chapter:} Secretary (2020),
+   President (2021); 
+   ``Journal club on Network optimization and interdiction'' (2021)
+
+   \textit{SMTB, ZPSH:} summer/winter schools for high-school students, 
+   instructor (2020, 2021)\\
+   
+   \section*{Industry experience}
+   \job{The Federal Grid (FGC UES)}{2013--2017}{Electricity transmission,
+     Moscow, Russia}{Team head: modeling and analytics}{Performance
+     benchmarking (branches), operational efficiency improvement. Internal
+     regulations/KPI, strategy, analytics, and presentations.}
+
+   \job{Ministry of Energy of Russia}{2013}{Public service: energy
+     (electricity), Moscow, Russia}{Deputy team head}{Transmission \&
+     distribution grids, benchmarking, economic efficiency.
+     Analytics, presentations.}
+
+   \jobl{Roland Berger Strategy Consultants}{2010--2013}{Strategic consulting,
+     Moscow, Russia}{ Intern $\rightarrow$ Junior
+     Consultant $\rightarrow$ Consultant}{Infrastructure and construction.
+     Strategy and performance: market entry, supply/demand modeling, growth
+     strategy, efficiency improvement.}
+ \end{minipage}
+\end{document}

@@ -1,0 +1,201 @@
+\documentclass[11pt]{article} \usepackage{geometry} % margins
+\usepackage{titlesec} % styling sections
+\usepackage[fixed]{fontawesome5} % nice icons
+\usepackage[svgnames]{xcolor}
+\usepackage{hyperref}  % for hyperlinks
+
+% styling parameters >>> Configure page margins with geometry
+\geometry{left=1.4cm, top=1cm, right=1.4cm, bottom=1.2cm, footskip=0.5cm}
+\hypersetup{
+  colorlinks=true,
+  allcolors={NavyBlue}
+}
+
+\titleformat{\section}{\normalfont\Large\bfseries}{\thesection}{1em}{}[{\titlerule[0.3pt]}]
+\titlespacing*{\section}{0pt}{0pt}{10pt}
+\pagenumbering{gobble}
+% <<<
+
+% some formatting macros
+\newcommand{\edu}[3]{
+  \textbf{#1}\hfill (#2)\\
+  #3\vspace{0.7em}}
+
+\newcommand{\jobl}[5]{%
+  \textbf{#1}\hfill (#2)\\
+  #3\vspace{0.25em}\\
+  \textbf{Role:} #4\\
+  \textbf{Focus:} #5}
+
+\newcommand{\job}[5]{%
+  \jobl{#1}{#2}{#3}{#4}{#5}\vspace{1.5em}
+}
+
+\newcommand{\mhref}[1]{\hfill\href{#1}{\small (more\faExternalLink*)}}
+\newcommand{\lastupdate}{\vfill\hfill \tiny Updated: 2021-09-27\newline \hspace*{\fill} Alexey Bochkarev}
+\begin{document}
+% info header >>>
+  \begin{minipage}[c]{0.74\textwidth}
+    \centering
+    {\LARGE \textbf{Alexey Bochkarev}}\\
+    ---\\ 
+    Researcher in Mathematical Optimization / Operations Research\\
+    PhD candidate, Clemson University
+  \end{minipage}\hfill%
+  \begin{minipage}{0.26\textwidth}
+    \faEnvelope \href{mailto:abochka@g.clemson.edu}{abochka@g.clemson.edu}\\
+    \faGlobe \href{https://www.bochkarev.io}{www.bochkarev.io}\\
+    \faGithub \href{https://github.com/alex-bochkarev}{alex-bochkarev}\\
+    \faTwitter \href{https://twitter.com/a_bochka}{@a\_bochka}\\
+    \faTelegram \href{https://t.me/abochka}{@abochka}
+  \end{minipage}
+% <<< end info header
+  
+  \vspace{1.0em}
+  \section*{Research interests}
+  Mathematical optimization, theory and applications, especially:\vspace{0.3em}
+  \begin{itemize}
+    \begin{minipage}{0.5\linewidth}
+      \item Combinatorial optimization,
+      \item Network optimization and interdiction,
+    \end{minipage}
+    \begin{minipage}{0.5\linewidth}
+      \item Decision diagrams and dynamic programming,
+      \item Applications of reinforcement learning techniques.
+    \end{minipage}
+  \end{itemize}
+
+  \noindent
+  \textbf{Applications:} So far my research has been driven more by
+  methodological questions, but I do have some experience of
+  implementing applied models in industry. Also, due to my background I have a
+  special interest in optimization related to electricity markets:
+  pricing / OPF / economic dispatch / infrastructure planning, etc.\vspace{0.5em}
+  \section*{Research experience / current projects \mhref{https://www.bochkarev.io/research/}}
+  \begin{itemize}
+    \itemsep0pt
+  \item \textbf{Align-BDD:} seeking to obtain computational benefits and
+    sensitivity information by representing a combinatorial problem as a
+    collection of Binary Decision Diagrams (BDDs). The project involves creating a heuristic to enforce a
+    certain structural property for a pair of BDDs and building a related
+    ``computational pipeline'' for a specific, hard optimization problem: a
+    variant of the facility location. 
+  \item \textbf{DSPI:} applying game-playing and reinforcement
+    learning techniques to the Dynamic Shortest-path Interdiction problem,
+    in a framework of a Monte-Carlo Search Tree based algorithm.
+  \end{itemize} 
+  Both projects involve design and implementation of an algorithm and
+  the related computational experiments.\vspace{0.5em}
+
+  \noindent\textbf{Research supervisor:}
+  \href{https://scholar.google.com/citations?user=87CaUHYAAAAJ&hl=en}{Dr. J. Cole
+    Smith.}
+  \vspace{0.5em}
+
+ \section*{Working papers and conference presentations}
+ \begin{itemize}
+    \itemsep0pt
+    \item \textbf{Working paper:} A. A. Bochkarev, J.C. Smith, On Aligning
+    Non-Order-Associated Binary Decision Diagrams, revision submitted to
+    \textit{INFORMS Journal on Computing}. (First submission: 2020/08/22)
+    \item \textbf{Presentation:} INFORMS Annual Meeting, 2020 (virtual), BDD section.
+ \end{itemize}
+ \section*{Grants and awards}
+ \begin{itemize}
+ \itemsep0pt 
+    \item Clemson University Doctoral Disseration Completion Grant (support for Fall 2021)
+    \item Graduate Travel Grant (to participate in INFORMS Annual Meeting 2021)
+    \item International Teaching Fellowship from Clemson University (partial
+      support in 2020, training in teaching)
+ \end{itemize}
+ \noindent
+ \begin{minipage}[t]{0.49\textwidth}
+   \section*{Education} 
+   \edu{PhD Industrial Engineering}{2018--2021 exp}{
+     Clemson University, US\\
+     Operations Research track}
+
+   \edu{MSc/BSc Appl. Math and Physics}{2004--2010}{
+     Moscow Institute of Physics\\
+     and Technology, Russia}
+
+   \edu{M.A. Economics}{2008--2010}{
+   New Economic School, Russia}
+ % Selected coursework included:
+
+ % \textbf{University:} Mathematical Programming, Network Flows, Algorithms and Data Structures,
+ % Stochastic Programming intro, Power Markets and Regulations, Game Theory,
+ % Probability / Statistics, Foundations of Data Science, Calculus \& Co.\vspace{0.5em}
+
+ % \textbf{Online:} Analytics Edge (MITx @ EdX), ML basics (Andrew Ng @ Coursera).\\
+\section*{(Human) Languages}
+English (fluent), Russian (native), German (A1).
+
+\end{minipage}\hfill%
+\begin{minipage}[t]{0.49\textwidth}
+   \section*{Technical skills \mhref{https://www.bochkarev.io/notes/stack/}}
+   \textbf{Main programming stack:}
+   \begin{itemize}
+     \itemsep0pt
+   \item Python (gurobi, CBC, numpy/pandas, etc.)
+     \item R (ggplot, dplyr, tidyverse),
+     \item Julia (JuMP/gurobi, LightGraphs),
+     \item C++ (gurobi, armadillo/BLAS, boost).
+   \end{itemize}\vspace{0.5em}
+   \textbf{Basic knowledge:} PyTorch, Java, Matlab/Octave. \vspace{1em}
+
+   \textbf{Other technical skills:}
+   PBS (comp cluster), GNU/Linux, bash; make, git, \LaTeX, Emacs, basic GIS
+   (QGIS), Inkscape, beamer / PPT / reveal.js, Jupyter.
+   \end{minipage}
+
+   \section*{Teaching experience \mhref{https://www.bochkarev.io/teaching/}}
+   \begin{itemize}
+     \itemsep0pt
+      \item Designed and delivered two 4-days mini-courses aimed at gifted
+      high-school students and early undergrads for School for Molecular and
+      Theoretical Biology (SMTB) and Puschino Winter School (ZPSh), both Russian
+      and English track:
+      \begin{itemize}
+        \itemsep0pt
+        \item ``Practical Introduction to Probability Theory'', ZPSh-2021,
+          SMTB-2021
+        \item ``A Glimpse into Algorithms'', SMTB-2020 (workshop), SMTB-2021 (course)
+      \end{itemize}
+      \item TA in ``Intro probability'' undergrad course at Clemson University
+        (IE3600), Summer 2021 \vspace{0.3em}
+\end{itemize}
+   \section*{Service and volunteering / Community}
+   Besides teaching at summer and winter schools (above), I have been doing some work under the umbrella of Clemson University INFORMS Student Chapter:
+   \begin{itemize}
+     \itemsep0pt
+   \item serving on the Executive Board: as a Secretary (2020) and President
+     (2021),
+   \item organized a ``Journal club on Network optimization and interdiction''
+     (2021),
+   \item designed and delivered ``OR Tech Seminar'' -- a series of four
+     workshops on ``research toolbox'' (2021). 
+   \end{itemize}
+   \vspace{0.3em}
+
+   \section*{Industry experience}
+   \job{The Federal Grid (FGC UES)}{2013--2017}{Electricity transmission,
+     Moscow, Russia}{Team head, modeling and analytics}{Performance
+     benchmarking (branches), operational efficiency improvement. Internal
+     regulations/KPI, strategy, analytics / modeling, and presentations.}
+
+   \noindent
+   \job{Ministry of Energy of Russia}{2013}{Public service: energy
+     (electricity), Moscow, Russia}{Deputy team head}{Electricity transmission and
+     distribution grids, benchmarking, economic efficiency.
+     Analytics, presentations.}
+
+   \noindent
+   \job{Roland Berger Strategy Consultants GmbH}{2010--2013}{Strategic consulting,
+     Moscow, Russia}{ Intern $\rightarrow$ Junior
+     Consultant $\rightarrow$ Consultant}{Infrastructure and construction.
+     Strategy and performance: market entry, supply/demand modeling, growth
+     strategy, efficiency improvement. Internal knowledge sharing, modeling, presentations.}
+
+   \lastupdate
+\end{document}
