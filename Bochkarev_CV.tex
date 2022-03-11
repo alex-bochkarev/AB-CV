@@ -1,7 +1,7 @@
 \documentclass[11pt]{article} \usepackage{geometry} % margins
 \usepackage{titlesec} % styling sections
 \usepackage[fixed]{fontawesome5} % nice icons
-\usepackage[svgnames]{xcolor}
+\usepackage[svgnames]{xcolor} % color names
 \usepackage{hyperref}  % for hyperlinks
 
 % styling parameters >>> Configure page margins with geometry
@@ -28,11 +28,12 @@
   \textbf{Focus:} #5}
 
 \newcommand{\job}[5]{%
-  \jobl{#1}{#2}{#3}{#4}{#5}\vspace{1.5em}
+  \jobl{#1}{#2}{#3}{#4}{#5}\vspace{0.5em}
 }
 
+% fancy hyperlinks to external resources.
 \newcommand{\mhref}[1]{\hfill\href{#1}{\small (more\faExternalLink*)}}
-\newcommand{\lastupdate}{\vfill\hfill \tiny Updated: 2021-09-27\newline \hspace*{\fill} Alexey Bochkarev}
+
 \begin{document}
 % info header >>>
   \begin{minipage}[c]{0.74\textwidth}
@@ -40,7 +41,7 @@
     {\LARGE \textbf{Alexey Bochkarev}}\\
     ---\\ 
     Researcher in Mathematical Optimization / Operations Research\\
-    PhD candidate, Clemson University
+    PhD in Industrial Engineering from Clemson University
   \end{minipage}\hfill%
   \begin{minipage}{0.26\textwidth}
     \faEnvelope \href{mailto:abochka@g.clemson.edu}{abochka@g.clemson.edu}\\
@@ -70,7 +71,8 @@
   methodological questions, but I do have some experience of
   implementing applied models in industry. Also, due to my background I have a
   special interest in optimization related to electricity markets:
-  pricing / OPF / economic dispatch / infrastructure planning, etc.\vspace{0.5em}
+  pricing / OPF / economic dispatch / infrastructure planning, etc.\vspace{1.5em}
+
   \section*{Research experience / current projects \mhref{https://www.bochkarev.io/research/}}
   \begin{itemize}
     \itemsep0pt
@@ -87,10 +89,16 @@
   Both projects involve design and implementation of an algorithm and
   the related computational experiments.\vspace{0.5em}
 
+  \noindent\textbf{Dissertation:} ``Selected Topics in Network Optimization:
+  Aligning Binary Decision Diagrams for a Facility Location Problem and a Search
+  Method for Dynamic Shortest Path Interdiction.''\\
+  \noindent (Online: \href{https://tigerprints.clemson.edu/all_dissertations/2915}{https://tigerprints.clemson.edu/all\_dissertations/2915}.)
+  \vspace{0.5em}
+
   \noindent\textbf{Research supervisor:}
   \href{https://scholar.google.com/citations?user=87CaUHYAAAAJ&hl=en}{Dr. J. Cole
     Smith.}
-  \vspace{0.5em}
+  \vspace{1.5em}
 
  \section*{Working papers and conference presentations}
  \begin{itemize}
@@ -99,19 +107,23 @@
     Non-Order-Associated Binary Decision Diagrams, revision submitted to
     \textit{INFORMS Journal on Computing}. (First submission: 2020/08/22)
     \item \textbf{Presentation:} INFORMS Annual Meeting, 2020 (virtual), BDD section.
+    \item \textbf{Presentation:} A. A. Bochkarev, J. C. Smith, A Monte Carlo
+      Tree Search for Dynamic Shortest-Path Interdiction, extended abstract
+      accepted to \textit{International Network Optimization Conference (INOC)
+        2022}, Aachen, Germany.
  \end{itemize}
  \section*{Grants and awards}
  \begin{itemize}
  \itemsep0pt 
-    \item Clemson University Doctoral Disseration Completion Grant (support for Fall 2021)
-    \item Graduate Travel Grant (to participate in INFORMS Annual Meeting 2021)
+    \item Clemson University Doctoral Disseration Completion grant (support for Fall 2021)
+    \item The Seth Bonder Foundation grant (to participate in INFORMS Annual Meeting 2021)
     \item International Teaching Fellowship from Clemson University (partial
       support in 2020, training in teaching)
  \end{itemize}
  \noindent
  \begin{minipage}[t]{0.49\textwidth}
    \section*{Education} 
-   \edu{PhD Industrial Engineering}{2018--2021 exp}{
+   \edu{PhD Industrial Engineering}{2018--2021}{
      Clemson University, US\\
      Operations Research track}
 
@@ -121,15 +133,9 @@
 
    \edu{M.A. Economics}{2008--2010}{
    New Economic School, Russia}
- % Selected coursework included:
 
- % \textbf{University:} Mathematical Programming, Network Flows, Algorithms and Data Structures,
- % Stochastic Programming intro, Power Markets and Regulations, Game Theory,
- % Probability / Statistics, Foundations of Data Science, Calculus \& Co.\vspace{0.5em}
-
- % \textbf{Online:} Analytics Edge (MITx @ EdX), ML basics (Andrew Ng @ Coursera).\\
 \section*{(Human) Languages}
-English (fluent), Russian (native), German (A1).
+English (fluent), Russian (native), German ($\sim$ A1).
 
 \end{minipage}\hfill%
 \begin{minipage}[t]{0.49\textwidth}
@@ -148,6 +154,7 @@ English (fluent), Russian (native), German (A1).
    PBS (comp cluster), GNU/Linux, bash; make, git, \LaTeX, Emacs, basic GIS
    (QGIS), Inkscape, beamer / PPT / reveal.js, Jupyter.
    \end{minipage}
+   \vspace{1em}
 
    \section*{Teaching experience \mhref{https://www.bochkarev.io/teaching/}}
    \begin{itemize}
@@ -163,7 +170,7 @@ English (fluent), Russian (native), German (A1).
         \item ``A Glimpse into Algorithms'', SMTB-2020 (workshop), SMTB-2021 (course)
       \end{itemize}
       \item TA in ``Intro probability'' undergrad course at Clemson University
-        (IE3600), Summer 2021 \vspace{0.3em}
+        (IE3600), Summer 2021
 \end{itemize}
    \section*{Service and volunteering / Community}
    Besides teaching at summer and winter schools (above), I have been doing some work under the umbrella of Clemson University INFORMS Student Chapter:
@@ -179,23 +186,17 @@ English (fluent), Russian (native), German (A1).
    \vspace{0.3em}
 
    \section*{Industry experience}
-   \job{The Federal Grid (FGC UES)}{2013--2017}{Electricity transmission,
-     Moscow, Russia}{Team head, modeling and analytics}{Performance
+   \job{Electric energy / The Federal Grid (FGC UES)}{2013--2017}{Electricity transmission.
+     Moscow, Russia}{Team deputy head $\rightarrow$ head; modeling and analytics}{Performance
      benchmarking (branches), operational efficiency improvement. Internal
-     regulations/KPI, strategy, analytics / modeling, and presentations.}
+     and external regulations / KPI, strategy, analytics / modeling, and presentations.}
 
    \noindent
-   \job{Ministry of Energy of Russia}{2013}{Public service: energy
-     (electricity), Moscow, Russia}{Deputy team head}{Electricity transmission and
-     distribution grids, benchmarking, economic efficiency.
-     Analytics, presentations.}
-
-   \noindent
-   \job{Roland Berger Strategy Consultants GmbH}{2010--2013}{Strategic consulting,
+   \job{Roland Berger Strategy Consultants GmbH}{2010--2013}{Strategic consulting.
      Moscow, Russia}{ Intern $\rightarrow$ Junior
      Consultant $\rightarrow$ Consultant}{Infrastructure and construction.
      Strategy and performance: market entry, supply/demand modeling, growth
      strategy, efficiency improvement. Internal knowledge sharing, modeling, presentations.}
-
-   \lastupdate
+   {%%% footer
+   \vfill\noindent\tiny\LaTeX{} source: \href{https://github.com/alex-bochkarev/AB-CV}{Github}\hfill  Updated: 2022-03-11}
 \end{document}
