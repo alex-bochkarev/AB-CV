@@ -4,5 +4,6 @@
 *.fls
 *.fdb_latexmk
 *.synctex.gz
+*.md.temp
 submitted/
 auto/
